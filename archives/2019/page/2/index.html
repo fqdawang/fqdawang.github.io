@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>res.setHeader()和res.writeHead() | 福球大王的博客</title>
+  <title>Archives: 2019 | 福球大王的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
-<meta name="keywords" content="node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="res.setHeader()和res.writeHead()">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/res-setHeader-和res-writeHead/index.html">
+  <meta name="description" content="前端小白，此网站用于技术或生活上的分享">
+<meta name="keywords" content="福球大王,福球,fqdawang,前端工程师,js,jQuery,javascript,html5,工程师,攻城狮,开发者,代码,html,css,css3,vue,webpack,git">
+<meta property="og:type" content="website">
+<meta property="og:title" content="福球大王的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
 <meta property="og:site_name" content="福球大王的博客">
-<meta property="og:description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
+<meta property="og:description" content="前端小白，此网站用于技术或生活上的分享">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-10T04:42:51.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="res.setHeader()和res.writeHead()">
-<meta name="twitter:description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
+<meta name="twitter:title" content="福球大王的博客">
+<meta name="twitter:description" content="前端小白，此网站用于技术或生活上的分享">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -153,137 +152,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-res-setHeader-和res-writeHead" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      res.setHeader()和res.writeHead()
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/25/搭建个人博客网站及主题配置/" class="archive-article-date">
+  	<time datetime="2019-07-25T12:37:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/07/25/搭建个人博客网站及主题配置/">搭建个人博客网站及主题配置</a>
     </h1>
   
 
-        
-        <a href="/2019/08/02/res-setHeader-和res-writeHead/" class="archive-article-date">
-  	<time datetime="2019-08-02T12:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- <div id="busuanzi_container_page_pv" style="color: rgb(153, 153, 153);font-size: 16px;line-height: 1.8em">总阅读量<span id="busuanzi_value_page_pv"></span>次</div> -->
-        <p><strong>事先声明：</strong> 这是我自己得出来的结论，如有不对，还望告知 :)</p>
-<p>在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？</p>
-<a id="more"></a>
-
-<blockquote>
-<p>设置响应头的目的是为了告诉浏览器我发送的数据是什么类型的，你应该用什么格式来编码显示。如果不设置，会自动生成一个响应头，但中文的话浏览器会乱码。</p>
-</blockquote>
-<blockquote>
-<p>在http协议中， Content-type就是用来告诉对方我给你发送的数据内容是什么类型</p>
-</blockquote>
-<p>Content-type对照表的网址：<a href="http://tool.oschina.net/commons/" target="_blank" rel="noopener">http://tool.oschina.net/commons/</a></p>
-<p>如何设置响应头，我认为有两种方法：</p>
-<ol>
-<li>res.setHeader() </li>
-<li>res.writeHead()</li>
-</ol>
-<p>res.setHeader()的写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.setHeader(&apos;Content-type&apos;, &apos;text/plain;charset=utf-8&apos;)</span><br></pre></td></tr></table></figure>
-
-<p>res.writeHead()的写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">参数1：必选，三位数的http状态码</span><br><span class="line">参数2：可选，可有可无</span><br><span class="line">参数3：可选，告诉浏览器我发给你的数据是什么类型的</span><br><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;: &apos;text/html;charset=utf-8&apos; &#125;)</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong> </p>
-<ol>
-<li>res.writeHead()必须在res.end()之前调用</li>
-<li>如果两者同时存在（没必要），要先写res.setHeader()，后写res.writeHead()，且res.writeHead()优先</li>
-</ol>
-<p>例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;text/plain;charset=utf-8&apos; &#125;);  ---text/plain就是普通文本，纯文本</span><br><span class="line">res.end(&apos;hello 世界&apos;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;text/html;charset=utf-8&apos; &#125;);     ---text/html 显示html的格式在页面上</span><br><span class="line">res.end(&apos;&lt;a href=&quot;&quot;&gt;I am 超链接&lt;/a&gt;&apos;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">图片不需要指定编码（utf-8），一般只为字符数据才指定编码</span><br><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;image/jpeg&apos; &#125;);</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">搭建网站</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/03/node-js中-favicon-ico请求处理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          node.js中/favicon.ico请求处理
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/08/01/vscode推荐字体：FiraCode/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vscode推荐字体：FiraCode</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -307,8 +240,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

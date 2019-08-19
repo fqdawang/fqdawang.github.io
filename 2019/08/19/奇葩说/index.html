@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>res.setHeader()和res.writeHead() | 福球大王的博客</title>
+  <title>奇葩说 | 福球大王的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
-<meta name="keywords" content="node.js">
+  <meta name="description" content="用主持人马东的话说：“《奇葩说》是一个严肃的辩论节目”，讲完他自己都笑哈哈，看过一二季的朋友应该知道，里面的荤段子可以说是数不胜数~但我依然觉得这是一档非常非常高逼格的节目。">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="res.setHeader()和res.writeHead()">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/res-setHeader-和res-writeHead/index.html">
+<meta property="og:title" content="奇葩说">
+<meta property="og:url" content="http://yoursite.com/2019/08/19/奇葩说/index.html">
 <meta property="og:site_name" content="福球大王的博客">
-<meta property="og:description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
+<meta property="og:description" content="用主持人马东的话说：“《奇葩说》是一个严肃的辩论节目”，讲完他自己都笑哈哈，看过一二季的朋友应该知道，里面的荤段子可以说是数不胜数~但我依然觉得这是一档非常非常高逼格的节目。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-10T04:42:51.623Z">
+<meta property="og:updated_time" content="2019-08-19T04:43:57.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="res.setHeader()和res.writeHead()">
-<meta name="twitter:description" content="事先声明： 这是我自己得出来的结论，如有不对，还望告知 :) 在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？">
+<meta name="twitter:title" content="奇葩说">
+<meta name="twitter:description" content="用主持人马东的话说：“《奇葩说》是一个严肃的辩论节目”，讲完他自己都笑哈哈，看过一二季的朋友应该知道，里面的荤段子可以说是数不胜数~但我依然觉得这是一档非常非常高逼格的节目。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -153,20 +153,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-res-setHeader-和res-writeHead" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-奇葩说" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      res.setHeader()和res.writeHead()
+      奇葩说
     </h1>
   
 
         
-        <a href="/2019/08/02/res-setHeader-和res-writeHead/" class="archive-article-date">
-  	<time datetime="2019-08-02T12:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
+        <a href="/2019/08/19/奇葩说/" class="archive-article-date">
+  	<time datetime="2019-08-19T04:42:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
 </a>
         
       </header>
@@ -174,40 +174,35 @@
     <div class="article-entry" itemprop="articleBody">
       
         <!-- <div id="busuanzi_container_page_pv" style="color: rgb(153, 153, 153);font-size: 16px;line-height: 1.8em">总阅读量<span id="busuanzi_value_page_pv"></span>次</div> -->
-        <p><strong>事先声明：</strong> 这是我自己得出来的结论，如有不对，还望告知 :)</p>
-<p>在node.js中，http协议如果不设置响应头，中文的话在客户端浏览器是会乱码的，那么设置响应头的目的是什么，又如何设置响应头？</p>
+        <p>用主持人马东的话说：“《奇葩说》是一个严肃的辩论节目”，讲完他自己都笑哈哈，看过一二季的朋友应该知道，里面的荤段子可以说是数不胜数~但我依然觉得这是一档非常非常高逼格的节目。</p>
 <a id="more"></a>
 
+<p>我从第一季开始追，今年要出第六季。里面有几期我看了不下三四遍，印象最深的是陈铭和詹青云“神仙打架”那一期，当时都上热搜了，辩题是“如果有一个芯片插入人类大脑可以实现全球知识共享，你支持吗？”</p>
+<p>我是支持的，我从小都在幻想有一项技术可以过目不忘，来应付古诗文、文言文考试，可是如果现在就有这样一个芯片的话，我应该会迫不及待就使用了。</p>
+<p>这个辩题一开始辩论的时候我是可以听懂的，后来轮到三辩，也就是陈铭和詹青云辩论的时候，说实话有些东西我是听不懂的，乃至最后的导师结辩，本人文化水平有限，第一次听我真的听不懂，只能从其他人崇拜的眼光中感受到很厉害的样子。后来看第二遍、第三遍，我慢慢慢慢的明白了他们表达的意思。</p>
+<p>里面我最喜欢的选手是马薇薇，非常非常厉害，讲话非常有逻辑，一点一点的引导观众往她的观点里带，她是第一季的总冠军。可是第五季，可能是轻敌的原因，我个人感觉马薇薇是没有状态的。而且第五季整体的辩题大多都是情啊爱啊，很少有引发人深思的辩题，不好这一季。</p>
+<p>我还很喜欢的一位选手是姜思达，我一点一点看着他从不怎么会辩论，到后来成为专业的辩论选手。我有一期非常非常非常被他感动，辩题是“爱上人工智能算不算爱情？”，听他娓娓道来他的观点，他的故事，我被他带入进去，非常打动人。</p>
+<p>我还很喜欢的以为选手是傅首尔，她讲话真的超搞笑，听她打辩论就像在听脱口秀，全是段子，搞笑担当。后来第五季她和另一位选手发生矛盾，在微博也闹得沸沸扬扬，节目组就把她们俩“踢出群聊”了，我为此很是惋惜啊！</p>
+<p>《奇葩说》是我个人非常非常喜爱的一档综艺，吹爆！里面的辩题、观点会令人深思，吹爆！</p>
+<p>附上里面我喜欢的一些“名人名言”：</p>
 <blockquote>
-<p>设置响应头的目的是为了告诉浏览器我发送的数据是什么类型的，你应该用什么格式来编码显示。如果不设置，会自动生成一个响应头，但中文的话浏览器会乱码。</p>
+<p>“被误会是表达者宿命”——马东</p>
 </blockquote>
 <blockquote>
-<p>在http协议中， Content-type就是用来告诉对方我给你发送的数据内容是什么类型</p>
+<p>“爱一个人就是低到尘埃里，别说缉毒犬，草履虫我都愿意做”——马薇薇</p>
 </blockquote>
-<p>Content-type对照表的网址：<a href="http://tool.oschina.net/commons/" target="_blank" rel="noopener">http://tool.oschina.net/commons/</a></p>
-<p>如何设置响应头，我认为有两种方法：</p>
-<ol>
-<li>res.setHeader() </li>
-<li>res.writeHead()</li>
-</ol>
-<p>res.setHeader()的写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.setHeader(&apos;Content-type&apos;, &apos;text/plain;charset=utf-8&apos;)</span><br></pre></td></tr></table></figure>
-
-<p>res.writeHead()的写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">参数1：必选，三位数的http状态码</span><br><span class="line">参数2：可选，可有可无</span><br><span class="line">参数3：可选，告诉浏览器我发给你的数据是什么类型的</span><br><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;: &apos;text/html;charset=utf-8&apos; &#125;)</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong> </p>
-<ol>
-<li>res.writeHead()必须在res.end()之前调用</li>
-<li>如果两者同时存在（没必要），要先写res.setHeader()，后写res.writeHead()，且res.writeHead()优先</li>
-</ol>
-<p>例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;text/plain;charset=utf-8&apos; &#125;);  ---text/plain就是普通文本，纯文本</span><br><span class="line">res.end(&apos;hello 世界&apos;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;text/html;charset=utf-8&apos; &#125;);     ---text/html 显示html的格式在页面上</span><br><span class="line">res.end(&apos;&lt;a href=&quot;&quot;&gt;I am 超链接&lt;/a&gt;&apos;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">图片不需要指定编码（utf-8），一般只为字符数据才指定编码</span><br><span class="line">res.writeHead(200, &#123; &apos;Content-type&apos;, &apos;image/jpeg&apos; &#125;);</span><br></pre></td></tr></table></figure>
-
+<blockquote>
+<p>“自由之代价使自由更加高贵”——马薇薇</p>
+</blockquote>
+<blockquote>
+<p>“其实你对那个人不是太在意的时候，你才会给他自由；如果你很在意的时候，你会给他一个礼物。”——薛兆丰</p>
+</blockquote>
+<blockquote>
+<p>“你拿诗和远方和苟且斗，你永远斗不赢的。因为苟且有一万种需求、一万种痛苦，而诗和远方只有一种快乐”——高晓松</p>
+</blockquote>
+<blockquote>
+<p>“小孩的观点是成年人一人一句堆砌起来的”——席瑞</p>
+</blockquote>
 
       
 
@@ -221,7 +216,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -240,18 +235,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/03/node-js中-favicon-ico请求处理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          node.js中/favicon.ico请求处理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/01/vscode推荐字体：FiraCode/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vscode推荐字体：FiraCode</div>
+    <a href="/2019/08/13/如我一般黑暗/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如我一般黑暗</div>
       <i class="icon-circle-right"></i>
     </a>
   
