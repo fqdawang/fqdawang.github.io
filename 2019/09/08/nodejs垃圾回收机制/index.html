@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>喜欢的东西你会说出来吗？ | 福球大王的博客</title>
+  <title>node.js垃圾回收机制 | 福球大王的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前看了一个关于马伊琍的访谈，先上图。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="本文是借鉴博主1和博主2的文章学习  每个应用程序都需要内存才能正常运行，内存管理提供了在程序请求时为其动态分配内存的方法，并在程序不需要它们时，释放它们，以便重用它们。">
+<meta name="keywords" content="node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="喜欢的东西你会说出来吗？">
-<meta property="og:url" content="http://yoursite.com/2019/08/03/喜欢的东西你会说出来吗？/index.html">
+<meta property="og:title" content="node.js垃圾回收机制">
+<meta property="og:url" content="http://yoursite.com/2019/09/08/nodejs垃圾回收机制/index.html">
 <meta property="og:site_name" content="福球大王的博客">
-<meta property="og:description" content="之前看了一个关于马伊琍的访谈，先上图。">
+<meta property="og:description" content="本文是借鉴博主1和博主2的文章学习  每个应用程序都需要内存才能正常运行，内存管理提供了在程序请求时为其动态分配内存的方法，并在程序不需要它们时，释放它们，以便重用它们。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2019/08/03/9RzKCL7ijMagBom.jpg">
-<meta property="og:updated_time" content="2019-08-03T09:33:31.688Z">
+<meta property="og:updated_time" content="2019-09-08T11:19:52.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="喜欢的东西你会说出来吗？">
-<meta name="twitter:description" content="之前看了一个关于马伊琍的访谈，先上图。">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/03/9RzKCL7ijMagBom.jpg">
+<meta name="twitter:title" content="node.js垃圾回收机制">
+<meta name="twitter:description" content="本文是借鉴博主1和博主2的文章学习  每个应用程序都需要内存才能正常运行，内存管理提供了在程序请求时为其动态分配内存的方法，并在程序不需要它们时，释放它们，以便重用它们。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -155,20 +153,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-喜欢的东西你会说出来吗？" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nodejs垃圾回收机制" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      喜欢的东西你会说出来吗？
+      node.js垃圾回收机制
     </h1>
   
 
   
-  <a href="/2019/08/03/喜欢的东西你会说出来吗？/" class="archive-article-date">
-  	<time datetime="2019-08-03T09:27:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
+  <a href="/2019/09/08/nodejs垃圾回收机制/" class="archive-article-date">
+  	<time datetime="2019-09-08T11:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
 </a>
   
   </header>
@@ -176,18 +174,22 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- <div id="busuanzi_container_page_pv" style="color: rgb(153, 153, 153);font-size: 16px;line-height: 1.8em">总阅读量<span id="busuanzi_value_page_pv"></span>次</div> -->
-    <p>之前看了一个关于马伊琍的访谈，先上图。</p>
+    <blockquote>
+<p>本文是借鉴<a href="http://udn.yyuap.com/forum.php?mod=viewthread&tid=142677" target="_blank" rel="noopener">博主1</a>和<a href="https://blog.csdn.net/qinghua9/article/details/38117715" target="_blank" rel="noopener">博主2</a>的文章学习</p>
+</blockquote>
+<p>每个应用程序都需要内存才能正常运行，内存管理提供了在程序请求时为其动态分配内存的方法，并在程序不需要它们时，释放它们，以便重用它们。</p>
 <a id="more"></a>
 
-<p><img src="https://i.loli.net/2019/08/03/9RzKCL7ijMagBom.jpg" alt></p>
-<p>我听她讲这段话就感觉在讲我自己，因为我也是这样的人。喜欢的东西不会直截了当的说“我喜欢这个”、“我要吃那个”，只会等着别人来猜我想买什么、想要什么。站在现在看当初，我认真的想过，我觉得这是跟生长环境有关系的。</p>
-<p>不知道你们有没有经历过这样的事情，你妈和你在路上走，遇到熟人，只要熟人拿东西给你吃，你妈的第一句话肯定是，“不要”、“家里有”，这几乎成为了条件反射。两个人你一言我一语，争执不下，于是熟人说：“你问问孩子要不要”，我的回答从小到大都没变过，“不要”。因为小时候的我，不懂什么叫客套，既然我妈说不要，两个人又推来推去，似乎极力的证明我妈的“不想要”。久而久之，“不要”这也成为了我的条件反射，不管我喜不喜欢。</p>
-<p>从我记事起，我奶奶就对我特别特别好，在城里的大姑小姑每次回家都会给奶奶准备好多好吃的，奶奶每次都留着给我。那时候我大姑对我说的最多一句话是：“倩倩啊，奶奶岁数也大了，这些好吃的留着给奶奶吃，你就少吃点，奶奶再给你，你就说不要。”就是因为这句话，每次我奶奶拿东西给我的时候，我就推三阻四，反正就是不要，即使我很想吃。</p>
-<p>从小耳濡目染、受到关于这方面的教育，就是 <strong>当有人问你要不要这个东西的时候，第一反应就是拒绝。我们还以为这是礼貌、是谦让。</strong></p>
-<p>直到我再长大一点，我特别喜欢跟性格直爽的人做朋友，因为在他们身上，我看到了我从小到大没有的那种个性，他们看到我桌上的零食可以拿起来就吃，换成当时的我，我是不好意思的。所以我喜欢跟他们相处，我希望我能被改变，变得可以大胆一点。</p>
-<p>高三的时候我去我一个姐家，她孩子三岁好像，在她身上我完全感觉不到长辈的感觉，就是相处起来特别愉快轻松。那天中午我姐问我：“倩倩，中午想吃什么？”，“都行啊”我说，“吃鱼吗？”，“别吃鱼了吧”，“你说你想吃什么？”，“那吃茄子吧”，我停了一会说道。</p>
-<p>看到了吗，因为我的“拒绝”思想，在肉类和蔬菜之间，我选择了蔬菜，倒不是因为我不喜欢吃鱼，恰恰因为想吃，所以拒绝。</p>
-<p>到现在，我21岁了，我依然很羡慕那些想要什么就说出来的人，虽然我成长了不少，但是那种“拒绝保守”的思想，早已经根深蒂固在我的血液里。尽管如此，我在尝试着改变，大家有一说一有二说二，喜欢就说喜欢，不想要就说不想要，这样多好~</p>
+<p>nodejs垃圾回收机制讲的是当你编写代码的时候，系统是如何为你清理内存的。</p>
+<p>这种回收机制将内存区分为年轻代和老年代，两个里面存放的生命周期不一样，使用的算法也不同。</p>
+<h4 id="年轻代回收算法Scavenge"><a href="#年轻代回收算法Scavenge" class="headerlink" title="年轻代回收算法Scavenge"></a>年轻代回收算法Scavenge</h4><p>年轻代回收算法使用的是Cheney（强尼）算法，使用复制的方式实现垃圾回收。它会将堆内存一分为二，在这两个空间里，只有一个会使用，另一个闲置，分别是from/to空间。当我们分配对象时，会在from空间进行分配，在回收时，会检查from空间，存活的对象被复制到to空间，非存活的对象会被释放掉。完成后这两个空间角色互换。</p>
+<p>如果，一个对象经过多次复制依然存活时，它会被认为是生命周期较长的对象，这种生命周期较长的对象会被移动到老年代里，采用新的算法进行管理。</p>
+<p>年轻代算法是典型的浪费空间换时间的算法。</p>
+<h4 id="老年代回收算法"><a href="#老年代回收算法" class="headerlink" title="老年代回收算法"></a>老年代回收算法</h4><p>老年代回收算法使用的是Mark-Sweep和Mark-Compact算法。</p>
+<h4 id="Mark-Sweep算法：标记"><a href="#Mark-Sweep算法：标记" class="headerlink" title="Mark-Sweep算法：标记"></a>Mark-Sweep算法：标记</h4><p>它会在标记阶段遍历堆中的所有对象，并标记存活的对象，在随后的清除阶段中，只清除没有标记的对象。</p>
+<p><em>年轻代算法只复制存活的对象，老年代算法只清除非存活的对象</em></p>
+<p>但是Mark-Sweep算法存在一个严重问题，就是每一次清理完之后会有内存碎片，使内存出现不连续的状态。这种内存碎片会对内存分配造成问题，一旦有一个大对象要分配的话，所有的碎片空间是无法完成的。为了解决Mark-Sweep内存碎片问题，Mark-Compact被提了出来。</p>
+<h4 id="Mark-Compact算法：清除"><a href="#Mark-Compact算法：清除" class="headerlink" title="Mark-Compact算法：清除"></a>Mark-Compact算法：清除</h4><p>在标记阶段的基础上，清除没有被标记的对象。在这个过程中，会将存活的对象往一端移动，移动完成后，直接清理掉边界外的内存，完成回收，也同时解决了内存碎片的问题。</p>
 
     
 
@@ -201,7 +203,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
         		</li>
       		
 		</ul>
@@ -220,18 +222,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/08/03/cnpm安装包失败解决办法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          cnpm安装包失败解决办法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/03/node-js中-favicon-ico请求处理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">node.js中/favicon.ico请求处理</div>
+    <a href="/2019/09/01/直击心灵的自我对话/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">直击心灵的自我对话</div>
       <i class="icon-circle-right"></i>
     </a>
   
