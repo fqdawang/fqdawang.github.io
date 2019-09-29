@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo上传图片 | 福球大王的博客</title>
+  <title>$.ajax、fetch、axios | 福球大王的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在这里教大家如何用hexo上传图片，首先上传的图片分两类：  上传本地图片 上传网络图片  我推荐将本地图片，也上传成网络图片，因为这样不占用你磁盘空间，其实也因为上传本地图片我也没搞懂的啦~ ~我们先来讲本地图片如何上传成网络图片">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="这些方法都是实现前后台数据交互，一一来列举。 $.ajax这是用jQuery封装的Ajax方法，虽然原生的Ajax在项目当中没有人会用的，但是还是需要了解原生。">
+<meta name="keywords" content="ajax,fetch,axios">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo上传图片">
-<meta property="og:url" content="http://yoursite.com/2019/07/28/hexo上传图片/index.html">
+<meta property="og:title" content="$.ajax、fetch、axios">
+<meta property="og:url" content="http://yoursite.com/2019/09/29/ajax、fetch、axios/index.html">
 <meta property="og:site_name" content="福球大王的博客">
-<meta property="og:description" content="在这里教大家如何用hexo上传图片，首先上传的图片分两类：  上传本地图片 上传网络图片  我推荐将本地图片，也上传成网络图片，因为这样不占用你磁盘空间，其实也因为上传本地图片我也没搞懂的啦~ ~我们先来讲本地图片如何上传成网络图片">
+<meta property="og:description" content="这些方法都是实现前后台数据交互，一一来列举。 $.ajax这是用jQuery封装的Ajax方法，虽然原生的Ajax在项目当中没有人会用的，但是还是需要了解原生。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2019/07/23/5d3721711b89f41794.png">
-<meta property="og:image" content="https://i.loli.net/2019/07/23/5d37221564f9522352.png">
-<meta property="og:image" content="https://i.loli.net/2019/07/23/5d3722324350b72504.png">
-<meta property="og:updated_time" content="2019-08-10T04:42:23.696Z">
+<meta property="og:updated_time" content="2019-09-29T12:00:29.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo上传图片">
-<meta name="twitter:description" content="在这里教大家如何用hexo上传图片，首先上传的图片分两类：  上传本地图片 上传网络图片  我推荐将本地图片，也上传成网络图片，因为这样不占用你磁盘空间，其实也因为上传本地图片我也没搞懂的啦~ ~我们先来讲本地图片如何上传成网络图片">
-<meta name="twitter:image" content="https://i.loli.net/2019/07/23/5d3721711b89f41794.png">
+<meta name="twitter:title" content="$.ajax、fetch、axios">
+<meta name="twitter:description" content="这些方法都是实现前后台数据交互，一一来列举。 $.ajax这是用jQuery封装的Ajax方法，虽然原生的Ajax在项目当中没有人会用的，但是还是需要了解原生。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -157,20 +153,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo上传图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ajax、fetch、axios" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      hexo上传图片
+      $.ajax、fetch、axios
     </h1>
   
 
   
-  <a href="/2019/07/28/hexo上传图片/" class="archive-article-date">
-  	<time datetime="2019-07-28T03:50:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
+  <a href="/2019/09/29/ajax、fetch、axios/" class="archive-article-date">
+  	<time datetime="2019-09-29T11:56:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-29</time>
 </a>
   
   </header>
@@ -178,29 +174,38 @@
   <div class="article-entry" itemprop="articleBody">
     
     <!-- <div id="busuanzi_container_page_pv" style="color: rgb(153, 153, 153);font-size: 16px;line-height: 1.8em">总阅读量<span id="busuanzi_value_page_pv"></span>次</div> -->
-    <p>在这里教大家如何用hexo上传图片，首先上传的图片分两类：</p>
-<ol>
-<li>上传本地图片</li>
-<li>上传网络图片</li>
-</ol>
-<p>我推荐将本地图片，也上传成网络图片，因为这样不占用你磁盘空间，其实也因为上传本地图片我也没搞懂的啦~ ~我们先来讲本地图片如何上传成网络图片</p>
+    <p>这些方法都是实现前后台数据交互，一一来列举。</p>
+<h3 id="ajax"><a href="#ajax" class="headerlink" title="$.ajax"></a>$.ajax</h3><p>这是用jQuery封装的Ajax方法，虽然原生的Ajax在项目当中没有人会用的，但是还是需要了解原生。</p>
 <a id="more"></a>
 
-<h3 id="本地图片上传成网络图片"><a href="#本地图片上传成网络图片" class="headerlink" title="本地图片上传成网络图片"></a>本地图片上传成网络图片</h3><p>有个在线将<a href="https://sm.ms/" target="_blank" rel="noopener">本地图片上传为网络图片</a>的网址，点击<code>Browse…</code>按钮选择要上传的图片</p>
-<p><img src="https://i.loli.net/2019/07/23/5d3721711b89f41794.png" alt></p>
-<p>然后点击<code>Upload</code>按钮开始上传生成URL链接</p>
-<p><img src="https://i.loli.net/2019/07/23/5d37221564f9522352.png" alt></p>
-<p>这是生成好的URL链接，一会上传到hexo的时候会用到</p>
-<p><img src="https://i.loli.net/2019/07/23/5d3722324350b72504.png" alt></p>
-<h3 id="在hexo上传图片"><a href="#在hexo上传图片" class="headerlink" title="在hexo上传图片"></a>在hexo上传图片</h3><p>在hexo根目录中执行命令<code>hexo n &quot;文档名称&quot;</code>生成一篇文档，是md格式的，所以我们要用Markdown的格式上传图片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](url &quot;title&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">  type: &apos;post&apos;,  </span><br><span class="line">  url: &apos;http://test.api&apos;,</span><br><span class="line">  data: &#123; username: &apos;admin&apos;, password: &apos;123&apos; &#125;, </span><br><span class="line">  dataType: &apos;json&apos;, </span><br><span class="line">  success() &#123;</span><br><span class="line">    data =&gt; &#123;</span><br><span class="line">      console.log(data);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  error() &#123;</span><br><span class="line">      console.log(&apos;服务器错误&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>alt：图片如果加载不出来时显示的文字，可选</li>
-<li>url：图片的网址，就是我们刚刚生成的那个链接，必选</li>
-<li>title：鼠标悬停在图片时显示的文字，可选</li>
+<li><code>type</code>：请求类型get/post，默认是get</li>
+<li><code>url</code>：请求地址</li>
+<li><code>data</code>：请求的参数，json格式</li>
+<li><code>dataType</code>：服务器响应的数据类型</li>
+<li>成功走success函数，失败走error函数</li>
 </ul>
-<p>OK，到这里在hexo上传图片就讲完了，是不是so easy~</p>
+<h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p>jQuery的get和post可以简写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$.get(url,data,callback)  // querystring格式</span><br><span class="line">$.post(url,data,callback) // x-www-form-urlencoded格式</span><br></pre></td></tr></table></figure>
+
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><p>百度介绍说fetch是下一代Ajax。它是采用Promise方式处理数据，只有IE不支持，gg~但安装一个小插件在IE中也可以正常用。</p>
+<h4 id="fetch的get请求"><a href="#fetch的get请求" class="headerlink" title="fetch的get请求"></a>fetch的get请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fetch(`http://127.0.0.1:3000/login?username=admin&amp;password=123`, &#123;</span><br><span class="line">      method: &apos;GET&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">      .then(res =&gt; res.json())</span><br><span class="line">      .then((data) =&gt; &#123;</span><br><span class="line">        console.log(data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(error =&gt; &#123;</span><br><span class="line">        console.log(&apos;服务器错误&apos;);</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>res =&gt; res.json()</code>：参数是response响应。json中放了两种状态：resolve和reject，fetch会自动帮我们判断状态码，然后根据状态码来决定promise走哪个函数。</li>
+</ul>
+<h4 id="fetch的post请求"><a href="#fetch的post请求" class="headerlink" title="fetch的post请求"></a>fetch的post请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fetch(`http://127.0.0.1:3000/login`, &#123;</span><br><span class="line">  method: &apos;POST&apos;,</span><br><span class="line">  headers:&#123;      // post请求必须要设置请求头</span><br><span class="line">    &apos;Content-Type&apos;:&apos;application/x-www-form-urlencoded&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  body: `username=admin&amp;password=123`</span><br><span class="line">&#125;)</span><br><span class="line">      .then(res =&gt; res.json())</span><br><span class="line">      .then((data) =&gt; &#123;</span><br><span class="line">        console.log(data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(error =&gt; &#123;</span><br><span class="line">        console.log(&apos;服务器错误&apos;);</span><br><span class="line">      &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><p>axios是我个人比较喜欢的数据交互的方式，它比fetch更轻便一些，这里我直接写axios的简写方式。</p>
+<p>axios默认是json类型的提交</p>
+<h4 id="axios的get请求"><a href="#axios的get请求" class="headerlink" title="axios的get请求"></a>axios的get请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(&apos;http://test.api&apos;, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      username: &apos;admin&apos;,</span><br><span class="line">      password: &apos;123&apos;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(data =&gt; &#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(err =&gt; &#123;</span><br><span class="line">    console.error(err);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="axios的post请求"><a href="#axios的post请求" class="headerlink" title="axios的post请求"></a>axios的post请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">axios</span><br><span class="line">  .post(&apos;http://test.api&apos;, &#123;</span><br><span class="line">    username: &apos;admin&apos;,</span><br><span class="line">    password: &apos;123&apos;,</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(data =&gt; &#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(err =&gt; &#123;</span><br><span class="line">    console.error(err);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="axios的跨域请求"><a href="#axios的跨域请求" class="headerlink" title="axios的跨域请求"></a>axios的跨域请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">  //设置跨域请求头</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &apos;X-Requested-With&apos;: &apos;XMLHttpRequest&apos;,</span><br><span class="line">    &apos;Content-Type&apos;: &apos;application/json; charset=UTF-8&apos;,</span><br><span class="line">    &apos;Access-Control-Allow-Origin&apos;: &apos;*&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  method: &quot;POST&quot;,</span><br><span class="line">  url: &quot;https://test/index.php&quot;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    username: &apos;admin&apos;,</span><br><span class="line">    password: &apos;123&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(e =&gt; console.log(e))</span><br></pre></td></tr></table></figure>
+
 
     
 
@@ -214,7 +219,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">fetch</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
         		</li>
       		
 		</ul>
@@ -233,18 +246,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/08/01/vscode推荐字体：FiraCode/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vscode推荐字体：FiraCode
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/25/搭建个人博客网站及主题配置/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建个人博客网站及主题配置</div>
+    <a href="/2019/09/16/koa中设置中文cookie/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">koa中设置中文cookie</div>
       <i class="icon-circle-right"></i>
     </a>
   
