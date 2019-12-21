@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/11 | 福球大王的博客</title>
+  <title>vue刷新当前页面 | 福球大王的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小白，此网站用于技术或生活上的分享">
-<meta name="keywords" content="福球大王,福球,fqdawang,前端工程师,js,jQuery,javascript,html5,工程师,攻城狮,开发者,代码,html,css,css3,vue,webpack,git">
-<meta property="og:type" content="website">
-<meta property="og:title" content="福球大王的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/11/index.html">
+  <meta name="description" content="参考文档：https://segmentfault.com/a/1190000017007631  有时候我们在Vue项目中做了一些操作（如删除或添加……），需要刷新一下页面。 我所知道的方法有这几种：  this.$router.go(0)  体验很差，会有一瞬间的白屏 location.reload()  体验也不是很好  用vue-router路由重定向到当前页面，页面是不会进行刷新的">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue刷新当前页面">
+<meta property="og:url" content="http://yoursite.com/2019/12/21/vue刷新当前页面/index.html">
 <meta property="og:site_name" content="福球大王的博客">
-<meta property="og:description" content="前端小白，此网站用于技术或生活上的分享">
+<meta property="og:description" content="参考文档：https://segmentfault.com/a/1190000017007631  有时候我们在Vue项目中做了一些操作（如删除或添加……），需要刷新一下页面。 我所知道的方法有这几种：  this.$router.go(0)  体验很差，会有一瞬间的白屏 location.reload()  体验也不是很好  用vue-router路由重定向到当前页面，页面是不会进行刷新的">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2019/12/21/JldNjqb2gXY81F4.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/21/siNwU2Bp1byvuMZ.png">
+<meta property="og:updated_time" content="2019-12-21T06:38:16.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="福球大王的博客">
-<meta name="twitter:description" content="前端小白，此网站用于技术或生活上的分享">
+<meta name="twitter:title" content="vue刷新当前页面">
+<meta name="twitter:description" content="参考文档：https://segmentfault.com/a/1190000017007631  有时候我们在Vue项目中做了一些操作（如删除或添加……），需要刷新一下页面。 我所知道的方法有这几种：  this.$router.go(0)  体验很差，会有一瞬间的白屏 location.reload()  体验也不是很好  用vue-router路由重定向到当前页面，页面是不会进行刷新的">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/21/JldNjqb2gXY81F4.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -157,60 +161,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-vue刷新当前页面" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/05/goodbye world/" class="archive-article-date">
-  	<time datetime="2019-11-05T11:44:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/05/goodbye world/">goodbye world</a>
+    <h1 class="article-title" itemprop="name">
+      vue刷新当前页面
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+  
+  <a href="/2019/12/21/vue刷新当前页面/" class="archive-article-date">
+  	<time datetime="2019-12-21T06:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-21</time>
+</a>
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <!-- <div id="busuanzi_container_page_pv" style="color: rgb(153, 153, 153);font-size: 16px;line-height: 1.8em">总阅读量<span id="busuanzi_value_page_pv"></span>次</div> -->
+    <blockquote>
+<p>参考文档：<a href="https://segmentfault.com/a/1190000017007631" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017007631</a></p>
+</blockquote>
+<p>有时候我们在Vue项目中做了一些操作（如删除或添加……），需要刷新一下页面。</p>
+<p>我所知道的方法有这几种：</p>
+<ol>
+<li>this.$router.go(0)  体验很差，会有一瞬间的白屏</li>
+<li>location.reload()  体验也不是很好 </li>
+<li>用vue-router路由重定向到当前页面，页面是不会进行刷新的</li>
+</ol>
+<a id="more"></a>
+
+<p>上网查，查到这种方法（网上真的什么都有），用 <strong>provide/inject组合</strong></p>
+<p><strong>原理：</strong> 允许一个祖先组件向其所有子孙后代组件注入一个依赖，<em>不论组件层次有多深</em>，并在上下游关系成立的时间里始终生效。</p>
+<p>在<code>App.vue</code>组件中声明<code>reload</code>方法，控制<code>router-view</code>的显示或隐藏，从而控制页面的再次加载。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;router-view v-if=&quot;isRouterAlive&quot;&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;App&apos;,</span><br><span class="line">  provide () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      reload: this.reload</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      isRouterAlive: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    reload () &#123;</span><br><span class="line">      this.isRouterAlive = false</span><br><span class="line">      this.$nextTick(function () &#123;</span><br><span class="line">        this.isRouterAlive = true</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在需要用到刷新的页面，在页面注入<code>App.vue</code>组件提供的reload依赖，在逻辑完成之后，直接<code>this.reload()</code>调用，即可刷新当前页面。</p>
+<p>注入<code>reload</code>方法<br><img src="https://i.loli.net/2019/12/21/JldNjqb2gXY81F4.png" alt></p>
+<p>直接调用<code>this.reload()</code>方法<br><img src="https://i.loli.net/2019/12/21/siNwU2Bp1byvuMZ.png" alt="微信截图_20191221142906.png"></p>
+
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/09/The-End-of-the-F-ing-World/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">The End of the F***ing World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -233,8 +292,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -363,6 +422,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">FiraCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
